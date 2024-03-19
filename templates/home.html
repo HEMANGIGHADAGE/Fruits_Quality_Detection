@@ -1,0 +1,60 @@
+{% extends "Base.html" %}
+
+{% block content %}
+
+
+<body>
+
+
+
+
+<div class="container">
+
+  <div class="jumbotron" >
+    <br>
+    <br>
+    <h1 class="display-4"><b>Fruity Fiesta</b></h1>
+    <h2 class="big"> <b>🍍 Lets pick some Fresh Fruits 🍍 </b></h2>
+    <hr class="my-4">
+
+  </div>
+
+</div>
+
+
+<div class="container">
+  <p>
+
+  </p>
+  <div class="collapse" id="collapseExample">
+
+  </div>
+    <hr>
+  <form action="{{url_for("pred")}}"  method="POST" enctype="multipart/form-data">
+    <h4>Click below to upload your <strong>image</strong>.</h4>
+
+    <div class="form-group">
+    <!-- <img src="../static/upload5.png" alt="img" width="20%" height="5%"> -->
+    <label>
+    <input type="file" name="file" id="file" style="display:none" accept="image/*" required>
+    <img src="../static/upload.png" width="50%">
+    </label>
+  </div>
+
+
+  <br>
+    <input type="submit" class="btn btn-secondary" name="Submit and predict" value="Submit and Predict">
+  </form>
+  <br>
+<footer>
+    <div class="container">
+        <center>
+            <p>Copyright &copy; Fruit Fiesta. All Rights Reserved  |  Contact Us: +91 90000 00000</p>
+        </center>
+    </div>
+</footer>
+</div>
+
+
+</body>
+{% endblock %}
